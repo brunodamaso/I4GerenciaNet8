@@ -3,13 +3,13 @@ namespace I4Gerencia;
 public class App : Application
 {
     private static readonly bool esMock = false;
-    private readonly ISettingsService settingsService;
+    private readonly ISettingsService SettingsService;
     public static Window? MainWindow { get; private set; }
     public IHost? Host { get; private set; }
 
     public App()
     {
-        this.settingsService = new SettingsService();
+        SettingsService = new SettingsService();
     }
 
     protected async override void OnLaunched(LaunchActivatedEventArgs args)
