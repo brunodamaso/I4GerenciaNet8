@@ -6,6 +6,7 @@
 
     <!-- Ensures the .xr.xml files are generated in a proper layout folder -->
     <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <Nullable>annotations</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,8 +26,7 @@
     <PackageReference Include="Uno.Extensions.Validation" Version="3.0.11" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
   </ItemGroup>
-
-
+  
   <Choose>
     <When Condition="$(IsWinAppSdk)">
       <PropertyGroup>
