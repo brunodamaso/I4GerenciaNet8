@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>I4Kernel</RootNamespace>
+    <AssemblyName>I4Kernel</AssemblyName>
+    <DefineConstants>$(DefineConstants);WINUI</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Uno.WinUI.Runtime.WebAssembly" Version="5.0.41" />
+  </ItemGroup>
+</Project>

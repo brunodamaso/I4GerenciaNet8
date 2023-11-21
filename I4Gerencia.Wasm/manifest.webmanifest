@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "I4Gerencia",
+  "display": "standalone",
+  "name": "I4Gerencia",
+  "short_name": "I4Gerencia",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}

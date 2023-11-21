@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"I4Gerencia.Windows (Unpackaged)": {
+			"commandName": "Project"
+		},
+		"I4Gerencia.Windows (Package)": {
+			"commandName": "MsixPackage"
+		}
+	}
+}
