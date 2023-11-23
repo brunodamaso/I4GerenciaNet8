@@ -71,7 +71,33 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\I4KernelUno\I4Kernel\I4Kernel.csproj" />
-    <ProjectReference Include="..\..\I4KernelUno\I4SQLServices\I4SQLServices.csproj" />
+    <None Remove="Components\EntryView\EntryView.Styles.xaml" />
+    <None Remove="Components\EntryView\EntryView.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Components\EntryView\EntryView.Styles.xaml" />
+    <Page Remove="Components\EntryView\EntryView.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\EntryView\EntryView.Styles.xaml" />
+    <UpToDateCheckInput Remove="Components\EntryView\EntryView.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Components\EntryView\EntryView.Styles.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <Generator>MSBuild:Compile</Generator>
+    </AdditionalFiles>
+    <AdditionalFiles Include="Components\EntryView\EntryView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <Generator>MSBuild:Compile</Generator>
+    </AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\I4KernelNet8\I4Kernel\I4Kernel.csproj" />
+    <ProjectReference Include="..\..\I4KernelNet8\I4SQLServices\I4SQLServices.csproj" />
   </ItemGroup>
 </Project>
