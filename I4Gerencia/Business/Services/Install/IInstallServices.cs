@@ -1,4 +1,4 @@
-namespace I4Gerencia.Services.Install;
+namespace I4Gerencia.Business.Services.Install;
 
 public interface IInstallServices
 {

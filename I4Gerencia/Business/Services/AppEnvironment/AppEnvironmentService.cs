@@ -1,4 +1,4 @@
-namespace I4Gerencia.Services.AppEnvironment;
+namespace I4Gerencia.Business.Services.AppEnvironment;
 
 public class AppEnvironmentService : IAppEnvironmentService
 {

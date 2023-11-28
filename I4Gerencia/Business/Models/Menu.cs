@@ -1,4 +1,4 @@
-﻿namespace I4Gerencia.Models;
+namespace I4Gerencia.Business.Models;
 
 public class Menu
 {

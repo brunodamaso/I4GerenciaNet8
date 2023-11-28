@@ -32,7 +32,7 @@
       <uap:VisualElements
         DisplayName="I4Gerencia"
         Description="I4Gerencia">
-        <uap:SplashScreen />
+        <uap:SplashScreen Image="Assets\SplashScreen.png"/>
       </uap:VisualElements>
     </Application>
   </Applications>

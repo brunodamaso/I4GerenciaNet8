@@ -1,0 +1,199 @@
+﻿<local:PageBase 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"	
+    xmlns:local="using:I4Gerencia.Presentation.Views"
+    xmlns:Components="using:I4Kernel.Components"
+    xmlns:uen="using:Uno.Extensions.Navigation.UI"
+	xmlns:utu="using:Uno.Toolkit.UI"
+    NavigationCacheMode="Required"
+    mc:Ignorable="d"
+    IsTabStop="False"
+    RequestedTheme="Light"
+	x:Class="I4Gerencia.Presentation.Views.InstallPage"
+	Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <local:PageBase.Resources>
+
+        <Style x:Key="InstallPage.SubTitulo.TextBlock" TargetType="TextBlock" BasedOn ="{StaticResource CupertinoPrimaryTitle}">
+            <Setter Property="Foreground" Value="White"  />
+            <Setter Property="FontWeight" Value="Bold"  />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Padding" Value="0,20" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="InstallPage.Titulo.TextBlock" TargetType="TextBlock" BasedOn ="{StaticResource CupertinoPrimaryTitle}">
+            <Setter Property="Foreground" Value="Black"  />
+            <Setter Property="Margin" Value="15,0,0,0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="InstallPage.TextBlock" TargetType="TextBlock"  BasedOn ="{StaticResource CupertinoBody}">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="End" />
+        </Style>
+
+    </local:PageBase.Resources>
+
+    <Border  BorderThickness="0" >
+        <Grid RowSpacing="5" ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="2" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="ms-appx:///Assets/Images/bgpanalgris.png"
+                Stretch="Fill"
+                Grid.ColumnSpan="5"
+                Grid.RowSpan="12"                   
+              />
+            <StackPanel  Orientation="Horizontal"
+                Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="3">
+                <Image
+                    Source="ms-appx:///Assets/SplashScreen.png"
+                    Width ="150"
+                    Height ="150"
+                />
+                <TextBlock x:Uid="Instalar"  
+                        Style="{StaticResource InstallPage.Titulo.TextBlock}"
+                        />
+            </StackPanel>
+
+
+            <Border Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Background="#3f7eae"/>
+
+            <Border Grid.Column="1"
+                    Grid.Row="2"          
+                    Grid.ColumnSpan="3"
+                    CornerRadius="8"
+                    VerticalAlignment="Center"
+                    Background="#67869d"  >
+                <TextBlock 
+                    x:Uid="TituloInstall"
+                    Style="{StaticResource InstallPage.SubTitulo.TextBlock}"
+                />
+            </Border>
+
+            <TextBlock
+                    Grid.Column="1"
+                    Grid.Row="4"  
+                    x:Uid="Config"
+                    Style="{StaticResource InstallPage.TextBlock}"/>
+
+            <!--<Components:EntryView  x:Name ="TxtConfig"
+                Grid.Column="2"
+                Grid.Row="4"  
+                HasTitle="False"
+                FontSize ="20"
+                IsReadOnly="True"
+                Text="{Binding TxtConfig}"
+            />-->
+
+            <Button 
+                Grid.Column="3"
+                Grid.Row="4"  
+                Content="..." 
+                Background="Gray"
+                FontSize="20"
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                CornerRadius="4"
+                Margin="0,-3,0,-1"
+                Command="{Binding GetConfigCommand}"
+            />
+
+            <TextBlock
+                Grid.Column="1"
+                Grid.Row="5"  
+                x:Uid="Servidor"
+                Style="{StaticResource InstallPage.TextBlock}"/>
+
+            <!--<Components:EntryView    x:Name ="TxtServer"
+                Grid.Column="2"
+                Grid.Row="5"  
+                Grid.ColumnSpan="2"
+                HasTitle="False"
+                IsReadOnly="True"
+                FontSize ="20"
+                Foreground="Black"    
+                Text="{Binding TxtServer}"
+              />-->
+
+            <TextBlock
+                Grid.Column="1"
+                Grid.Row="6"  
+                x:Uid="NombreBBDD"
+                Style="{StaticResource InstallPage.TextBlock}"/>
+
+            <!--<Components:EntryView    x:Name ="TxtBBDD" 
+                Grid.Column="2"
+                Grid.Row="6"  
+                Grid.ColumnSpan="2"
+                HasTitle="False"
+                IsReadOnly="True"
+                FontSize ="20"
+                Foreground="Black"    
+                Text="{Binding TxtBBDD}"
+            />-->
+
+            <TextBlock
+                Grid.Column="1"
+                Grid.Row="7"  
+                x:Uid="TipoBBDD"
+                Style="{StaticResource InstallPage.TextBlock}"/>
+
+            <!--<Components:EntryView   x:Name ="TxtTipoBD"   
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Grid.Row="7"  
+                HasTitle="False"
+                IsReadOnly="True"
+                FontSize ="20"
+                Foreground="Black"   
+                IsTabStop="True"
+                Text="{Binding TxtTipoBD}"
+            />
+
+            <Components:ButtonView
+                Grid.Column="1"
+                Grid.Row="9"  
+                Grid.ColumnSpan="3"
+                ButtonStyle="Blue"
+                Command="{Binding DoAceptarCommand}"
+                x:Uid="Aceptar"               
+            />
+            <Components:ButtonView
+                Grid.Column="1"
+                Grid.Row="10"  
+                Grid.ColumnSpan="3"
+                ButtonStyle="Black"
+                x:Uid="Cancelar"
+                Command="{Binding DoCancelCommand}"
+           />-->
+        </Grid>
+    </Border>
+</local:PageBase>

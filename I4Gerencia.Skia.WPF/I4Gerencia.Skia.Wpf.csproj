@@ -2,9 +2,10 @@
   <PropertyGroup>
     <OutputType Condition="'$(Configuration)'=='Release'">WinExe</OutputType>
     <OutputType Condition="'$(Configuration)'=='Debug'">Exe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>$(DotNetVersion)-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <UICulture>es</UICulture>
   </PropertyGroup>
   <ItemGroup Label="AssemblyInfo">
     <AssemblyAttribute Include="System.Runtime.InteropServices.ComVisibleAttribute">
@@ -45,5 +46,13 @@
   <ItemGroup>
     <ProjectReference Include="..\I4Gerencia\I4Gerencia.csproj" />
   </ItemGroup>
-  <Import Project="..\I4Gerencia.Base\base.props" />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+ 
+  <Import Project="..\I4Gerencia.Shared\base.props" />
+
+  <Target Name="ValidateOverrides" BeforeTargets="Restore;_CheckForUnsupportedTargetFramework" Condition="'$(OverrideTargetFramework)' != ''">
+    <Error Text="OverrideTargetFramework set to '$(OverrideTargetFramework)' is invalid. Set OverrideTargetFramework to $([MSBuild]::Escape('$'))(DotNetVersion) or skip building this project (eg unload the project in Visual Studio)" Condition="'$(OverrideTargetFramework)'!='$(DotNetVersion)'" />
+  </Target>
 </Project>

@@ -1,32 +1,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) or '$(EnableWindowsTargeting)' == 'true'">$(TargetFrameworks);net8.0-windows10.0.19041</TargetFrameworks>
-    <TargetFrameworks>$(TargetFrameworks);net8.0;net8.0-android;net8.0-ios</TargetFrameworks>
-    <TargetFrameworks Condition="'$(OverrideTargetFrameworks)'!=''">$(OverrideTargetFrameworks)</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) or '$(EnableWindowsTargeting)' == 'true'">$(TargetFrameworks);$(DotNetVersion)-windows10.0.19041</TargetFrameworks>
+    <TargetFrameworks>$(TargetFrameworks);$(DotNetVersion);$(DotNetVersion)-android;$(DotNetVersion)-ios</TargetFrameworks>
+    <TargetFrameworks Condition="'$(OverrideTargetFramework)'!=''">$(OverrideTargetFramework)</TargetFrameworks>
 
     <!-- Ensures the .xr.xml files are generated in a proper layout folder -->
     <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
     <Nullable>annotations</Nullable>
+
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Uno.Cupertino.WinUI" Version="4.0.6" />
     <PackageReference Include="Uno.WinUI" Version="5.0.48" />
-    <PackageReference Include="Uno.Toolkit.WinUI" Version="5.0.17" />
     <PackageReference Include="Uno.Resizetizer" Version="1.2.1" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-    <PackageReference Include="Uno.Extensions" Version="2.4.2" />
     <PackageReference Include="Uno.Extensions.Configuration" Version="3.0.11" />
     <PackageReference Include="Uno.Extensions.Logging.WinUI" Version="3.0.11" />
+    <PackageReference Include="Uno.Toolkit.WinUI" Version="5.0.17" />
     <PackageReference Include="Uno.Extensions.Core.WinUI" Version="3.0.11" />
     <PackageReference Include="Uno.Extensions.Hosting.WinUI" Version="3.0.11" />
     <PackageReference Include="Uno.Extensions.Localization.WinUI" Version="3.0.11" />
     <PackageReference Include="Uno.Extensions.Navigation.Toolkit.WinUI" Version="3.0.11" />
     <PackageReference Include="Uno.Extensions.Navigation.WinUI" Version="3.0.11" />
+    <PackageReference Include="Uno.Extensions" Version="2.4.2" />
     <PackageReference Include="Uno.Extensions.Validation" Version="3.0.11" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" ExcludeAssets="runtime" />
   </ItemGroup>
-  
+
   <Choose>
     <When Condition="$(IsWinAppSdk)">
       <PropertyGroup>
@@ -43,8 +46,8 @@
         <!-- <WindowsSdkPackageVersion>10.0.22621.28</WindowsSdkPackageVersion> -->
       </PropertyGroup>
       <ItemGroup>
-        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231008000" />
-        <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
+        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231115000" />
+        <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.2428" />
       </ItemGroup>
     </When>
     <Otherwise>
@@ -71,33 +74,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Components\EntryView\EntryView.Styles.xaml" />
-    <None Remove="Components\EntryView\EntryView.xaml" />
+    <None Remove="Presentation\Views\Shell.xaml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="Components\EntryView\EntryView.Styles.xaml" />
-    <Page Remove="Components\EntryView\EntryView.xaml" />
+    <UpToDateCheckInput Remove="Presentation\Views\Shell.xaml" />
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Components\EntryView\EntryView.Styles.xaml" />
-    <UpToDateCheckInput Remove="Components\EntryView\EntryView.xaml" />
+    <ProjectReference Include="D:\insys4-vs\I4Mobil\I4KernelNet8\I4Kernel\I4Kernel.csproj" />
+    <ProjectReference Include="D:\insys4-vs\I4Mobil\I4KernelNet8\I4SQLServices\I4SQLServices.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="Components\EntryView\EntryView.Styles.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <Generator>MSBuild:Compile</Generator>
-    </AdditionalFiles>
-    <AdditionalFiles Include="Components\EntryView\EntryView.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <Generator>MSBuild:Compile</Generator>
-    </AdditionalFiles>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\I4KernelNet8\I4Kernel\I4Kernel.csproj" />
-    <ProjectReference Include="..\..\I4KernelNet8\I4SQLServices\I4SQLServices.csproj" />
+    <Folder Include="Assets\Images\" />
   </ItemGroup>
 </Project>

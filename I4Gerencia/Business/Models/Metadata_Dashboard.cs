@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace I4Gerencia.Models;
+namespace I4Gerencia.Business.Models;
 public partial class Metadata_Dashboard : BaseModel
 {
     public int dash_id { get; set; }

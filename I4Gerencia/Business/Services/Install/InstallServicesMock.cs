@@ -1,8 +1,8 @@
-﻿using I4Gerencia.Services.Settings;
+﻿using I4Gerencia.Business.Services.Settings;
 using I4Kernel.Services;
 using Windows.Storage.Pickers;
 
-namespace I4Gerencia.Services.Install;
+namespace I4Gerencia.Business.Services.Install;
 
 public class InstallServicesMock : IInstallServices
 {

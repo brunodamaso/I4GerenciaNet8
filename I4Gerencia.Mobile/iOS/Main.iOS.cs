@@ -1,6 +1,7 @@
 using UIKit;
 
 namespace I4Gerencia.iOS;
+
 public class EntryPoint
 {
     // This is the main entry point of the application.

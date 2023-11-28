@@ -1,15 +1,14 @@
-using I4Gerencia.Services.Settings;
-using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Diagnostics;
+using Microsoft.Data.SqlClient;
 
-namespace I4Gerencia.Services.RepositorySQL;
-public class RepositorySQL : SQLService, IRepositorySQL
+namespace I4Gerencia.Business.Services.RepositorySql;
+public class RepositorySql : SQLService, IRepositorySQL
 {
-    private ISettingsService SettingsService;
-    private ISQLService SQLService;
+    private readonly ISettingsService SettingsService;
+    private readonly ISQLService SQLService;
 
-    public RepositorySQL(ISQLService _SQLService, ISettingsService _settingsService)
+    public RepositorySql(ISQLService _SQLService, ISettingsService _settingsService)
     {
         this.SettingsService = _settingsService;
         this.SQLService = _SQLService;
@@ -33,19 +32,19 @@ public class RepositorySQL : SQLService, IRepositorySQL
         return Connection;
     }
 
-    //public SqlTransaction BeginTransaction(SqlConnection sourceConnection)
-    //{
-    //    return this.SQLService.BeginTransaction(sourceConnection);
-    //}
+    ////public SqlTransaction BeginTransaction(SqlConnection sourceConnection)
+    ////{
+    ////    return this.SQLService.BeginTransaction(sourceConnection);
+    ////}
 
-    //public bool EndTransaction(SqlTransaction sqlTransaction)
-    //{
-    //    return this.SQLService.EndTransaction(sqlTransaction);
-    //}
-    //public void Rollback(SqlTransaction sqlTransaction)
-    //{
-    //    this.SQLService.Rollback(sqlTransaction);
-    //}
+    ////public bool EndTransaction(SqlTransaction sqlTransaction)
+    ////{
+    ////    return this.SQLService.EndTransaction(sqlTransaction);
+    ////}
+    ////public void Rollback(SqlTransaction sqlTransaction)
+    ////{
+    ////    this.SQLService.Rollback(sqlTransaction);
+    ////}
 
 
     public Task<List<T>> ExecuteList<T>(string stringCommand, SqlTransaction sqlTransaction = null, List<KeyValuePair<string, object>> Parametros = null) where T : BaseModel, new()

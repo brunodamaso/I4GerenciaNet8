@@ -1,6 +1,6 @@
 using I4Kernel.Services.Settings;
 
-namespace I4Gerencia.Services.Settings;
+namespace I4Gerencia.Business.Services.Settings;
 
 public class SettingsService : SettingsServiceBase, ISettingsService
 {
@@ -23,6 +23,7 @@ public class SettingsService : SettingsServiceBase, ISettingsService
 
     public SettingsService() //ISettingsServiceBase settingsServiceBase
     {
+
         //settingsServiceBase.AuthAccessToken = GlobalSetting.Instance.AuthToken;
     }
 

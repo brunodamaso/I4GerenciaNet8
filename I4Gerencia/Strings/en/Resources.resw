@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,7 +117,412 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ApplicationName" xml:space="preserve">
-    <value>I4Gerencia-en</value>
+  <data name="Cargando.Text" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Item.Text" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Cancel_allCaps.Text" xml:space="preserve">
+    <value>CANCELAR</value>
+  </data>
+  <data name="ErrorQuery" xml:space="preserve">
+    <value>Hubo un error al procesar los datos. Por favor, inténtelo de nuevo más tarde.</value>
+    <comment>gen</comment>
+  </data>
+  <data name="NotImplementedFunctionality.Text" xml:space="preserve">
+    <value>Funcion no implementada</value>
+  </data>
+  <data name="Login.Text" xml:space="preserve">
+    <value>Login</value>
+    <comment>gen</comment>
+  </data>
+  <data name="ConnectionError.Text" xml:space="preserve">
+    <value>No hay coneccion disponible.</value>
+  </data>
+  <data name="ConnectionErrorDescription.Text" xml:space="preserve">
+    <value>Please check your network connection and try again.</value>
+  </data>
+  <data name="OptionNotAvailableOffline.Text" xml:space="preserve">
+    <value>no hay conexion disponible</value>
+    <comment>gen</comment>
+  </data>
+  <data name="OptionNotAvailableOfflineDescription.Text" xml:space="preserve">
+    <value>Funcionalidad no esta disponible offline</value>
+  </data>
+  <data name="DBError.Text" xml:space="preserve">
+    <value>Error procesando database.</value>
+  </data>
+  <data name="SynchronizationStatus.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="ErrorGettingUsers" xml:space="preserve">
+    <value>Cannot get Users</value>
+  </data>
+  <data name="ErrorProcessingData" xml:space="preserve">
+    <value>Error Procesando los datos.</value>
+    <comment>gen</comment>
+  </data>
+  <data name="NoData.Text" xml:space="preserve">
+    <value>No hay datos.</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Cancelar.Text" xml:space="preserve">
+    <value>Cancelar</value>
+    <comment>gen</comment>
+  </data>
+  <data name="NombreBBDD.Text" xml:space="preserve">
+    <value>Base de Datos</value>
+    <comment>gen</comment>
+  </data>
+  <data name="TituloInstall.Text" xml:space="preserve">
+    <value>Configurar Insys4 DashBoard</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Usuario.Text" xml:space="preserve">
+    <value>Usuario</value>
+    <comment>gen</comment>
+  </data>
+  <data name="DatosBBDDIncorrectos.Text" xml:space="preserve">
+    <value>Problemas con la conexion al servidor. Revise los parametros e intente de nuevo</value>
+    <comment>gen</comment>
+  </data>
+  <data name="ErrorBBDD" xml:space="preserve">
+    <value>Error al conectar con la base de datos</value>
+    <comment>gen</comment>
+  </data>
+  <data name="ErrorFaltanCampos" xml:space="preserve">
+    <value>Faltan campos por llenar</value>
+    <comment>gen</comment>
+  </data>
+  <data name="InstallCorrecto" xml:space="preserve">
+    <value>Sus datos fueron configurados correctamente, ingrese con su usuario y contraseña.</value>
+    <comment>das</comment>
+  </data>
+  <data name="LicenciaUsada.Text" xml:space="preserve">
+    <value>Esta licencia ya fue utilizada en otro dispositivo, por favor utilice otra.</value>
+  </data>
+  <data name="ErrorNoHayConexion" xml:space="preserve">
+    <value>No tiene conexión al servidor, revise su conexión e intente de nuevo</value>
+    <comment>gen</comment>
+  </data>
+  <data name="UsuarioIncorrecto.Text" xml:space="preserve">
+    <value>El usuario es incorrecto, por favor revise los datos.</value>
+  </data>
+  <data name="UsuarioYaAsignado.Text" xml:space="preserve">
+    <value>El usuario ya tiene asignado un dispositivo.</value>
+  </data>
+  <data name="Instalar.Text" xml:space="preserve">
+    <value>Instalar EN</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Password.Text" xml:space="preserve">
+    <value>Password</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Recordar.Text" xml:space="preserve">
+    <value>Recordar</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Compañia.Text" xml:space="preserve">
+    <value>Compañia</value>
+  </data>
+  <data name="DesarrolladoPor.Text" xml:space="preserve">
+    <value>Desarrollado por Insysoft,C.A.</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Version.Text" xml:space="preserve">
+    <value>Versión</value>
+    <comment>das</comment>
+  </data>
+  <data name="Items.Text" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="Parametros.Text" xml:space="preserve">
+    <value>Parametros</value>
+  </data>
+  <data name="SincronizarStatus.Text" xml:space="preserve">
+    <value>Sincronización</value>
+  </data>
+  <data name="Busqueda.Text" xml:space="preserve">
+    <value>Buscar items</value>
+  </data>
+  <data name="Pedidos.Text" xml:space="preserve">
+    <value>Pedidos</value>
+  </data>
+  <data name="Descarga.Text" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="NoHayRegistros.Text" xml:space="preserve">
+    <value>No hay registros</value>
+  </data>
+  <data name="ProcesarItemTitle.Text" xml:space="preserve">
+    <value>Procesar item</value>
+  </data>
+  <data name="Sincronizacion.Text" xml:space="preserve">
+    <value>Sincronización</value>
+  </data>
+  <data name="Sincronizar.Text" xml:space="preserve">
+    <value>Sincronizar</value>
+  </data>
+  <data name="CodigoVendedor.Text" xml:space="preserve">
+    <value>Codigo Vendedor</value>
+  </data>
+  <data name="Empresa.Text" xml:space="preserve">
+    <value>Empresa</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Licencia.Text" xml:space="preserve">
+    <value>Licencia</value>
+  </data>
+  <data name="Configuracion" xml:space="preserve">
+    <value>Configuración EN</value>
+  </data>
+  <data name="NoGraboLocalmente.Text" xml:space="preserve">
+    <value>No se pudó grabar localmente</value>
+  </data>
+  <data name="EquipoInvalido.Text" xml:space="preserve">
+    <value>Equipo invalido. Contacte al administrador</value>
+  </data>
+  <data name="ErrorLoginOPassword" xml:space="preserve">
+    <value>Error de login o password</value>
+    <comment>gen</comment>
+  </data>
+  <data name="DatosNoEncontrados.Text" xml:space="preserve">
+    <value>No se encontraron datos, debe sincronizar para descargarlos</value>
+  </data>
+  <data name="CorreoEnviado.Text" xml:space="preserve">
+    <value>Correo de restablecimiento de contraseña enviado correctamente</value>
+  </data>
+  <data name="ErrorCorreo" xml:space="preserve">
+    <value>Error al enviar el correo de restablecimiento de contraseña</value>
+  </data>
+  <data name="ErrorDesconocido" xml:space="preserve">
+    <value>Ha ocurrido un error desconocido</value>
+    <comment>gen</comment>
+  </data>
+  <data name="EmailNulo.Text" xml:space="preserve">
+    <value>Este usuario no tiene email registrado</value>
+  </data>
+  <data name="ErrorGrabacion" xml:space="preserve">
+    <value>Error de grabación de {0} en la base de datos{1}</value>
+  </data>
+  <data name="Accion.Text" xml:space="preserve">
+    <value>Acción</value>
+  </data>
+  <data name="Grabar.Text" xml:space="preserve">
+    <value>Grabar</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Cliente.Text" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="DocumentoAbierto.Text" xml:space="preserve">
+    <value>Documento esta abierto</value>
+  </data>
+  <data name="DocumentoYaCerrado.Text" xml:space="preserve">
+    <value>Documento ya esta cerrado</value>
+  </data>
+  <data name="No.Text" xml:space="preserve">
+    <value>No</value>
+    <comment>gen</comment>
+  </data>
+  <data name="ReabrirDocumento.Text" xml:space="preserve">
+    <value>Desea reabrir el documento?</value>
+  </data>
+  <data name="Reversar?.Text" xml:space="preserve">
+    <value>Desea reversar el documento?</value>
+  </data>
+  <data name="Si.Text" xml:space="preserve">
+    <value>Si</value>
+    <comment>gen</comment>
+  </data>
+  <data name="RutasHoy.Text" xml:space="preserve">
+    <value>Rutas de hoy</value>
+  </data>
+  <data name="Todos.Text" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="Cerrar.Text" xml:space="preserve">
+    <value>CERRAR</value>
+  </data>
+  <data name="NoHayRutas.Text" xml:space="preserve">
+    <value>No hay rutas</value>
+  </data>
+  <data name="ErrorWeb" xml:space="preserve">
+    <value>Ocurrió un error en la web ({0}){1}</value>
+  </data>
+  <data name="Abrir.Text" xml:space="preserve">
+    <value>ABRIR</value>
+  </data>
+  <data name="Cobranzas.Text" xml:space="preserve">
+    <value>Cobranzas</value>
+  </data>
+  <data name="IndiqueTexto.Text" xml:space="preserve">
+    <value>Indique texto a buscar</value>
+  </data>
+  <data name="Menu.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="OlvidoContraseña.Text" xml:space="preserve">
+    <value>¿Olvidó su contraseña?</value>
+  </data>
+  <data name="Rutas.Text" xml:space="preserve">
+    <value>Rutas</value>
+  </data>
+  <data name="Ventas.Text" xml:space="preserve">
+    <value>Ventas</value>
+  </data>
+  <data name="Informacion.Text" xml:space="preserve">
+    <value>Información:</value>
+  </data>
+  <data name="Saldo.Text" xml:space="preserve">
+    <value>Saldo:</value>
+  </data>
+  <data name="UltimaVisita.Text" xml:space="preserve">
+    <value>Ultima Visita:</value>
+  </data>
+  <data name="Nombre.Text" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Cliente:.Text" xml:space="preserve">
+    <value>Cliente:</value>
+  </data>
+  <data name="PedidoNro.Text" xml:space="preserve">
+    <value>Pedido Nro.:</value>
+  </data>
+  <data name="Editar.Text" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Eliminar.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="Eliminar?.Text" xml:space="preserve">
+    <value>Desea eliminar el documento?</value>
+  </data>
+  <data name="Reenviar.Text" xml:space="preserve">
+    <value>Reenviar</value>
+  </data>
+  <data name="Reenviar?.Text" xml:space="preserve">
+    <value>Desea reenviar el documento?</value>
+  </data>
+  <data name="Regresar.Text" xml:space="preserve">
+    <value>Regresar</value>
+  </data>
+  <data name="SalirSinGrabar.Text" xml:space="preserve">
+    <value>Salir sin grabar</value>
+  </data>
+  <data name="Direccion.Text" xml:space="preserve">
+    <value>Direccion</value>
+  </data>
+  <data name="Observaciones.Text" xml:space="preserve">
+    <value>Observaciones</value>
+  </data>
+  <data name="Nuevo.Text" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="Reversar.Text" xml:space="preserve">
+    <value>Reversar</value>
+  </data>
+  <data name="ReciboNro.Text" xml:space="preserve">
+    <value>Recibo Nro.:</value>
+  </data>
+  <data name="Config.Text" xml:space="preserve">
+    <value>Ruta I4Init</value>
+    <comment>das</comment>
+  </data>
+  <data name="Servidor.Text" xml:space="preserve">
+    <value>Servidor</value>
+    <comment>gen</comment>
+  </data>
+  <data name="TipoBBDD.Text" xml:space="preserve">
+    <value>Tipo BBDD</value>
+    <comment>gen</comment>
+  </data>
+  <data name="DeseaSalir.Text" xml:space="preserve">
+    <value>¿Desea salir?</value>
+    <comment>gen</comment>
+  </data>
+  <data name="ArchivoIncorrecto" xml:space="preserve">
+    <value>Archivo incorrecto</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_COD.Placeholder" xml:space="preserve">
+    <value>Código</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_FRM.Placeholder" xml:space="preserve">
+    <value>Formulario</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_NOM.Placeholder" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_SQL.Placeholder" xml:space="preserve">
+    <value>Query</value>
+    <comment>das</comment>
+  </data>
+  <data name="FRMDashBoard.Text" xml:space="preserve">
+    <value>MAESTRO DE PIZARRAS</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_COD.ToolTips" xml:space="preserve">
+    <value>Código de la pizarra. Numeración automatica según el formulario que se le indique</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_FRM.ToolTips" xml:space="preserve">
+    <value>Formulario al que sera asignado la pizarra</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_NOM.ToolTips" xml:space="preserve">
+    <value>Nombre de la pizarra</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_SQL.ToolTips" xml:space="preserve">
+    <value>Sentencia SQL</value>
+    <comment>das</comment>
+  </data>
+  <data name="CampoMaximum" xml:space="preserve">
+    <value>El campo debe tener un máximo de {0} digitos</value>
+    <comment>gen</comment>
+  </data>
+  <data name="CampoMinimum" xml:space="preserve">
+    <value>El campo debe tener un minimo {0} digitos</value>
+    <comment>gen</comment>
+  </data>
+  <data name="CampoNoExisteOpcion" xml:space="preserve">
+    <value>No existe esa opción en la lista</value>
+    <comment>gen</comment>
+  </data>
+  <data name="CampoObligatorio" xml:space="preserve">
+    <value>El campo es obligatorio</value>
+    <comment>gen</comment>
+  </data>
+  <data name="DASH_DATOS.ToolTips" xml:space="preserve">
+    <value>Listado de campos separados por coma, que se usaran en el Query, Si desea asignar el valor indiquelo con =&lt;valor&gt;, ejemplo: cliente="0255",tipodocum ="FAC",fecha,item</value>
+    <comment>das</comment>
+  </data>
+  <data name="DASH_DATOS.Placeholder" xml:space="preserve">
+    <value>Campos</value>
+    <comment>das</comment>
+  </data>
+  <data name="FRMMenu.Text" xml:space="preserve">
+    <value>Menu</value>
+    <comment>das</comment>
+  </data>
+  <data name="Usuario.Placeholder" xml:space="preserve">
+    <value>Usuario pt</value>
+  </data>
+  <data name="CampoRango" xml:space="preserve">
+    <value>El campo debe tener entre {0} digitos y {1} digitos</value>
+    <comment>gen</comment>
+  </data>
+  <data name="Aceptar.Text" xml:space="preserve">
+    <value>Aceptar</value>
+    <comment>gen</comment>
   </data>
 </root>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace I4Gerencia.Models;
+namespace I4Gerencia.Business.Models;
 public class Metadata_DashBoardUser : BaseModel
 {
     public int dashu_id { get; set; }

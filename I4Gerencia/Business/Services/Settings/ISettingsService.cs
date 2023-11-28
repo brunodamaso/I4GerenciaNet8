@@ -1,6 +1,6 @@
 ﻿using I4Kernel.Services.Settings;
 
-namespace I4Gerencia.Services.Settings;
+namespace I4Gerencia.Business.Services.Settings;
 
 public partial interface ISettingsService : ISettingsServiceBase
 {

@@ -1,6 +1,6 @@
 using Microsoft.Data.SqlClient;
 
-namespace I4Gerencia.Services.RepositorySQL;
+namespace I4Gerencia.Business.Services.RepositorySql;
 public interface IRepositorySQL : ISQLService
 {
     SqlConnection GetConexion();

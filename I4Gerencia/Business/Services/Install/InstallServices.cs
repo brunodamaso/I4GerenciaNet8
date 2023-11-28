@@ -1,18 +1,18 @@
-using I4Gerencia.Services.RepositorySQL;
-using I4Gerencia.Services.Settings;
+using I4Gerencia.Business.Services.RepositorySql;
+using I4Gerencia.Business.Services.Settings;
 using I4Kernel.Services;
 using Windows.Storage.Pickers;
 
-namespace I4Gerencia.Services.Install;
+namespace I4Gerencia.Business.Services.Install;
 
 public class InstallServices : IInstallServices
 {
-    private readonly IRepositorySQL RepositorySQL;
+    private readonly IRepositorySQL RepositorySql;
     private readonly ISettingsService SettingsService;
 
     public InstallServices(IRepositorySQL _RepositorySQL, ISettingsService _settingsService) //IRepositorySQL _RepositorySQL, 
     {
-        this.RepositorySQL = _RepositorySQL;
+        this.RepositorySql = _RepositorySQL;
         this.SettingsService = _settingsService;
     }
 
@@ -57,7 +57,7 @@ public class InstallServices : IInstallServices
 
             this.SettingsService.ConnectionString = ConnectionString;
             string stringCommand = $"select * from metadata_usuarios where usu_abrev = 'INSYS4'";
-            bool? resultado = await this.RepositorySQL.ExecuteNonQuery(stringCommand);
+            bool? resultado = await this.RepositorySql.ExecuteNonQuery(stringCommand);
             switch (resultado)
             {
                 case true:
